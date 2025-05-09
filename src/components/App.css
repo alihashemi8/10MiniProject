@@ -1,0 +1,21 @@
+body{
+  background-color: #c0bebe ;
+}
+.text-shadow-red {
+  text-shadow: 2px 2px 4px rgba(87, 9, 9, 0.8); 
+}
+.text-shadow-red-hover:hover {
+  text-shadow: 2px 2px 4px rgba(185, 28, 28, 0.7); /* قرمز تیره */
+}
+@keyframes pulse-smooth {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.btn-animate:hover {
+  animation: pulse-smooth 0.5s ease-in-out;
+}
