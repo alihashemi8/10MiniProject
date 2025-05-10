@@ -300,17 +300,17 @@ function ToDo() {
                 <XAxis dataKey="name" />
                 <YAxis />
                 <RechartsTooltip />
-                <Bar dataKey="completed" stackId="a" barSize={80}>
+                <Bar dataKey="completed" stackId="a" barSize={50}>
                   {chartData.bar.map((entry, index) => (
                     <Cell key={`bar-${index}`} fill={COLORS[0]} />
                   ))}
                 </Bar>
-                <Bar dataKey="inProgress" stackId="a" barSize={80}>
+                <Bar dataKey="inProgress" stackId="a" barSize={50}>
                   {chartData.bar.map((entry, index) => (
                     <Cell key={`bar-${index}`} fill={COLORS[1]} />
                   ))}
                 </Bar>
-                <Bar dataKey="expired" stackId="a" barSize={80}>
+                <Bar dataKey="expired" stackId="a" barSize={50}>
                   {chartData.bar.map((entry, index) => (
                     <Cell key={`bar-${index}`} fill={COLORS[2]} />
                   ))}

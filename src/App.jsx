@@ -3,6 +3,12 @@ import "./components/App.css";
 
 import ToDoList from "./assets/ToDoList.png";
 import WeatherWidgetImg from "./assets/WeatherWidget.png"; 
+import ProfileAppimg from "./assets/ProfileAppimg.png"
+import LoginFormimg from "./assets/LoginFormimg.png"
+import BMIimg  from "./assets/BMIimg.png"
+import Galleryimg from "./assets/Galleryimg.png"
+import Shopimg from "./assets/Shopimg.png"
+
 import Instagram from "./assets/Instagram.svg";
 import Telegram from "./assets/Telegram.svg";
 import X from "./assets/X.svg";
@@ -40,35 +46,35 @@ function App() {
       id: 3,
       title: "Profile Card",
       description: "A responsive and modern profile UI component with social links.",
-      image: "https://via.placeholder.com/300x200?text=Profile+Card",
+      image: ProfileAppimg,
       link: "#",
     },
     {
       id: 4,
       title: "Login Form",
       description: "Clean login form with client-side validation and error handling.",
-      image: "https://via.placeholder.com/300x200?text=Login+Form",
+      image: LoginFormimg,
       link: "#",
     },
     {
       id: 5,
       title: "BMI",
       description: "Calculate your Body Mass Index based on height and weight.",
-      image: "https://via.placeholder.com/300x200?text=Calculator",
+      image: BMIimg,
       link: "#",
     },
     {
       id: 6,
       title: "Gallery",
       description: "A simple image gallery layout with grid and lightbox effect.",
-      image: "https://via.placeholder.com/300x200?text=Quote+Generator",
+      image: Galleryimg,
       link: "#",
     },
     {
       id: 7,
       title: "Shop",
       description: "Product showcase with basic cart and price layout (static demo).",
-      image: "https://via.placeholder.com/300x200?text=Countdown+Timer",
+      image: Shopimg,
       link: "#",
     },
     {
