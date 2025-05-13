@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FiUser } from "react-icons/fi";
 
 const ProfileCard = () => {
@@ -13,19 +13,6 @@ const ProfileCard = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
-
-  // Load the theme preference from localStorage when the component mounts
-  useEffect(() => {
-    const savedMode = localStorage.getItem("darkMode");
-    if (savedMode === "true") {
-      setDarkMode(true);
-      document.documentElement.classList.add("dark");
-    } else {
-      setDarkMode(false);
-      document.documentElement.classList.remove("dark");
-    }
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -49,39 +36,8 @@ const ProfileCard = () => {
     setSubmitted(false);
   };
 
-  const toggleDarkMode = () => {
-    setDarkMode((prevMode) => {
-      const newMode = !prevMode;
-      localStorage.setItem("darkMode", newMode.toString());
-      if (newMode) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-      return newMode;
-    });
-  };
-
   return (
-    <div
-      className={`m-4 max-w-md mx-auto rounded-xl p-8 space-y-6 transition-all duration-300 ${
-        darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-900"
-      }`}
-    >
-      {/* Dark Mode Toggle Button */}
-      <div className="flex justify-end">
-        <button
-          onClick={toggleDarkMode}
-          className={`p-2 rounded-lg transition-all ${
-            darkMode
-              ? "bg-gray-600 text-white hover:bg-indigo-700"
-              : "bg-gray-600 text-white hover:bg-indigo-700"
-          }`}
-        >
-          {darkMode ? "Light Mode" : "Dark Mode"}
-        </button>
-      </div>
-
+    <div className="m-4 max-w-md mx-auto rounded-xl p-8 space-y-6 bg-white text-gray-900 shadow-xl transition-all duration-300">
       {/* Avatar */}
       <div className="flex flex-col items-center">
         <label htmlFor="imageUpload" className="cursor-pointer relative">
@@ -92,8 +48,8 @@ const ProfileCard = () => {
               className="w-28 h-28 rounded-full object-cover ring-2 ring-indigo-400"
             />
           ) : (
-            <div className="w-28 h-28 rounded-full bg-gray-600 dark:bg-gray-500 flex items-center justify-center ring-2 ring-gray-500">
-              <FiUser className="text-gray-300 text-4xl" />
+            <div className="w-28 h-28 rounded-full bg-gray-300 flex items-center justify-center ring-2 ring-gray-400">
+              <FiUser className="text-gray-600 text-4xl" />
             </div>
           )}
         </label>
@@ -108,27 +64,24 @@ const ProfileCard = () => {
         )}
       </div>
 
-      {/* Info Form or Display */}
+      {/* Form or Info Display */}
       {!submitted ? (
         <form onSubmit={handleSubmit} className="space-y-4">
-<input
-  type="text"
-  name="firstName"
-  placeholder="First Name"
-  value={profile.firstName}
-  onChange={handleChange}
-  className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-indigo-400
-             bg-gray-900 text-gray-800 
-             dark:bg-gray-600 dark:text-white dark:border-gray-500"
-/>
-
+          <input
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+            value={profile.firstName}
+            onChange={handleChange}
+            className="w-full px-4 py-2 rounded-lg border bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          />
           <input
             type="text"
             name="lastName"
             placeholder="Last Name"
             value={profile.lastName}
             onChange={handleChange}
-            className="w-full bg-white dark:bg-gray-600 border border-gray-600 dark:border-gray-500 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            className="w-full px-4 py-2 rounded-lg border bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-400"
           />
           <input
             type="text"
@@ -136,7 +89,7 @@ const ProfileCard = () => {
             placeholder="National ID"
             value={profile.nationalId}
             onChange={handleChange}
-            className="w-full bg-white dark:bg-gray-600 border border-gray-600 dark:border-gray-500 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            className="w-full px-4 py-2 rounded-lg border bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-400"
           />
           <input
             type="tel"
@@ -144,7 +97,7 @@ const ProfileCard = () => {
             placeholder="Phone Number"
             value={profile.phone}
             onChange={handleChange}
-            className="w-full bg-white dark:bg-gray-600 border border-gray-600 dark:border-gray-500 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            className="w-full px-4 py-2 rounded-lg border bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-400"
           />
           <input
             type="email"
@@ -152,7 +105,7 @@ const ProfileCard = () => {
             placeholder="Email"
             value={profile.email}
             onChange={handleChange}
-            className="w-full bg-white dark:bg-gray-600 border border-gray-600 dark:border-gray-500 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            className="w-full px-4 py-2 rounded-lg border bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-400"
           />
 
           {/* Gender */}
@@ -184,7 +137,6 @@ const ProfileCard = () => {
             </div>
           </div>
 
-          {/* Save Button */}
           <button
             type="submit"
             className="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition"
@@ -197,13 +149,13 @@ const ProfileCard = () => {
           <p className="text-lg font-semibold">
             {profile.firstName} {profile.lastName}
           </p>
-          <p className="text-gray-300">National ID: {profile.nationalId}</p>
-          <p className="text-gray-300">Phone: {profile.phone}</p>
-          <p className="text-gray-300">Email: {profile.email}</p>
-          <p className="text-gray-300">Gender: {profile.gender}</p>
+          <p className="text-gray-600">National ID: {profile.nationalId}</p>
+          <p className="text-gray-600">Phone: {profile.phone}</p>
+          <p className="text-gray-600">Email: {profile.email}</p>
+          <p className="text-gray-600">Gender: {profile.gender}</p>
           <button
             onClick={handleEdit}
-            className="mt-4 px-6 py-2 bg-gray-600 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-500 transition"
+            className="mt-4 px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-400 transition"
           >
             Edit
           </button>

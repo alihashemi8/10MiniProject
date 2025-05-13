@@ -2,27 +2,28 @@ import { useState } from "react";
 import "./components/App.css";
 
 import ToDoList from "./assets/ToDoList.png";
-import WeatherWidgetImg from "./assets/WeatherWidget.png"; 
-import ProfileAppimg from "./assets/ProfileAppimg.png"
-import LoginFormimg from "./assets/LoginFormimg.png"
-import BMIimg  from "./assets/BMIimg.png"
-import Galleryimg from "./assets/Galleryimg.png"
-import Shopimg from "./assets/Shopimg.png"
+import WeatherWidgetImg from "./assets/WeatherWidget.png";
+import ProfileAppimg from "./assets/ProfileAppimg.png";
+import LoginFormimg from "./assets/LoginFormimg.png";
+import BMIimg from "./assets/BMIimg.png";
+import Galleryimg from "./assets/Galleryimg.png";
+import Shopimg from "./assets/Shopimg.png";
 
 import Instagram from "./assets/Instagram.svg";
 import Telegram from "./assets/Telegram.svg";
 import X from "./assets/X.svg";
 
-import BMI from './components/BMI.jsx';
-import CurrencyConverter from './components/CurrencyConverter.jsx';
-import Gallery from './components/Gallery.jsx';
-import LoginForm from './components/LoginForm.jsx';
-import NotepadApp from './components/NotepadApp.jsx';
-import PersonalBlog from './components/PersonalBlog.jsx';
-import ProfileCard from './components/ProfileCard.jsx';
-import Shop from './components/Shop.jsx';
-import ToDo from './components/ToDo.jsx';
-import WeatherWidget from './components/WeatherWidget.jsx';
+import BMI from "./components/BMI.jsx";
+import CurrencyConverter from "./components/CurrencyConverter.jsx";
+import Gallery from "./components/Gallery.jsx";
+import AuthForm from "./components/AuthForm.jsx";
+import NotepadApp from "./components/NotepadApp.jsx";
+import PersonalBlog from "./components/PersonalBlog.jsx";
+import ProfileCard from "./components/ProfileCard.jsx";
+import Shop from "./components/Shop.jsx";
+import ToDo from "./components/ToDo.jsx";
+import WeatherWidget from "./components/WeatherWidget.jsx";
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -31,28 +32,32 @@ function App() {
     {
       id: 1,
       title: "To-do App",
-      description: "Manage daily tasks with add, edit, and delete functionality.",
+      description:
+        "Manage daily tasks with add, edit, and delete functionality.",
       image: ToDoList,
       link: "#",
     },
     {
       id: 2,
       title: "Weather Widget",
-      description: "Get live weather updates by city name using OpenWeather API.",
+      description:
+        "Get live weather updates by city name using OpenWeather API.",
       image: WeatherWidgetImg,
       link: "#",
     },
     {
       id: 3,
       title: "Profile Card",
-      description: "A responsive and modern profile UI component with social links.",
+      description:
+        "A responsive and modern profile UI component with social links.",
       image: ProfileAppimg,
       link: "#",
     },
     {
       id: 4,
       title: "Login Form",
-      description: "Clean login form with client-side validation and error handling.",
+      description:
+        "Clean login form with client-side validation and error handling.",
       image: LoginFormimg,
       link: "#",
     },
@@ -66,21 +71,24 @@ function App() {
     {
       id: 6,
       title: "Gallery",
-      description: "A simple image gallery layout with grid and lightbox effect.",
+      description:
+        "A simple image gallery layout with grid and lightbox effect.",
       image: Galleryimg,
       link: "#",
     },
     {
       id: 7,
       title: "Shop",
-      description: "Product showcase with basic cart and price layout (static demo).",
+      description:
+        "Product showcase with basic cart and price layout (static demo).",
       image: Shopimg,
       link: "#",
     },
     {
       id: 8,
       title: "Personal Blog",
-      description: "Minimal blog layout with posts preview and responsive design.",
+      description:
+        "Minimal blog layout with posts preview and responsive design.",
       image: "https://via.placeholder.com/300x200?text=Color+Picker",
       link: "#",
     },
@@ -94,7 +102,8 @@ function App() {
     {
       id: 10,
       title: "Currency Converter",
-      description: "Convert currencies using live exchange rates and dropdown inputs.",
+      description:
+        "Convert currencies using live exchange rates and dropdown inputs.",
       image: "https://via.placeholder.com/300x200?text=Currency+Converter",
       link: "#",
     },
@@ -121,13 +130,25 @@ function App() {
       {/* Social Media */}
       <div className="flex justify-center gap-6 mt-6">
         <a href="#" className="hover:scale-105 transition-transform">
-          <img src={Instagram} alt="Instagram" className="w-10 h-10 rounded-xl hover:drop-shadow-lg" />
+          <img
+            src={Instagram}
+            alt="Instagram"
+            className="w-10 h-10 rounded-xl hover:drop-shadow-lg"
+          />
         </a>
         <a href="#" className="hover:scale-105 transition-transform">
-          <img src={Telegram} alt="Telegram" className="w-10 h-10 rounded-xl hover:drop-shadow-lg" />
+          <img
+            src={Telegram}
+            alt="Telegram"
+            className="w-10 h-10 rounded-xl hover:drop-shadow-lg"
+          />
         </a>
         <a href="#" className="hover:scale-105 transition-transform">
-          <img src={X} alt="X" className="w-10 h-10 rounded-xl hover:drop-shadow-lg" />
+          <img
+            src={X}
+            alt="X"
+            className="w-10 h-10 rounded-xl hover:drop-shadow-lg"
+          />
         </a>
       </div>
 
@@ -165,7 +186,8 @@ function App() {
       <BMI />
       <CurrencyConverter />
       <Gallery />
-      <LoginForm />
+      <AuthForm />
+
       <NotepadApp />
       <PersonalBlog />
       <ProfileCard />
