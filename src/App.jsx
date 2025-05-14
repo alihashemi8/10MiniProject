@@ -8,6 +8,8 @@ import LoginFormimg from "./assets/LoginFormimg.png";
 import BMIimg from "./assets/BMIimg.png";
 import Galleryimg from "./assets/Galleryimg.png";
 import Shopimg from "./assets/Shopimg.png";
+import NotepadAppimg from "./assets/NotepadAppimg.png";
+import PersonalBlogimg from "./assets/PersonalBlogimg.png";
 
 import Instagram from "./assets/Instagram.svg";
 import Telegram from "./assets/Telegram.svg";
@@ -23,7 +25,6 @@ import ProfileCard from "./components/ProfileCard.jsx";
 import Shop from "./components/Shop.jsx";
 import ToDo from "./components/ToDo.jsx";
 import WeatherWidget from "./components/WeatherWidget.jsx";
-
 
 function App() {
   const [count, setCount] = useState(0);
@@ -89,14 +90,14 @@ function App() {
       title: "Personal Blog",
       description:
         "Minimal blog layout with posts preview and responsive design.",
-      image: "https://via.placeholder.com/300x200?text=Color+Picker",
+      image: PersonalBlogimg,
       link: "#",
     },
     {
       id: 9,
       title: "Notepad App",
       description: "A lightweight note-taking app with local storage support.",
-      image: "https://via.placeholder.com/300x200?text=Image+Carousel",
+      image: NotepadAppimg,
       link: "#",
     },
     {
@@ -110,7 +111,7 @@ function App() {
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-200 p-4">
       {/* Heading & Introduce */}
       <div>
         <p className="text-center my-20 text-3xl font-bold drop-shadow-md transition-all hover:drop-shadow-lg text-shadow-red-hover">
@@ -194,7 +195,7 @@ function App() {
       <Shop />
       <ToDo />
       <WeatherWidget />
-    </>
+    </div>
   );
 }
 
