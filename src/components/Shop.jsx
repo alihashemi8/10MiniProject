@@ -28,9 +28,9 @@ const Shop = () => {
   const total = cart.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <div className="min-h-screen bg-[#f4eaea] font-sans">
+    <div className="min-h-screen bg-[#f4eaea] font-sans rounded-2xl">
       {/* Navigation Bar */}
-      <nav className="bg-[#f8dddd] rounded-b-2xl shadow-sm px-6 py-4 sticky top-0 z-10">
+      <nav className="bg-[#f8dddd] rounded-b-2xl shadow-sm px-6 py-4 sticky top-0 z-10 rounded-2xl">
         {/* Search - desktop/tablet only */}
         <div className="hidden md:flex justify-between items-center flex-wrap gap-4">
           <div className="flex gap-2 flex-wrap">

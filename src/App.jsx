@@ -10,6 +10,7 @@ import Galleryimg from "./assets/Galleryimg.png";
 import Shopimg from "./assets/Shopimg.png";
 import NotepadAppimg from "./assets/NotepadAppimg.png";
 import PersonalBlogimg from "./assets/PersonalBlogimg.png";
+import CurrencyConverterimg from "./assets/CurrencyConverterimg.png";
 
 import Instagram from "./assets/Instagram.svg";
 import Telegram from "./assets/Telegram.svg";
@@ -105,7 +106,7 @@ function App() {
       title: "Currency Converter",
       description:
         "Convert currencies using live exchange rates and dropdown inputs.",
-      image: "https://via.placeholder.com/300x200?text=Currency+Converter",
+      image: CurrencyConverterimg,
       link: "#",
     },
   ];
@@ -175,7 +176,7 @@ function App() {
             </p>
             <a
               href={project.link}
-              className="mt-auto bg-[#3add91] hover:bg-[#2fb879] text-white text-sm font-medium px-4 py-2 rounded-xl transition-all duration-300 text-center"
+              className="mt-auto bg-amber-700 hover:bg-amber-800 text-white text-sm font-medium px-4 py-2 rounded-xl transition-all duration-300 text-center"
             >
               View Project
             </a>
