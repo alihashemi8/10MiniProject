@@ -41,7 +41,7 @@ function BMICalculator() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.4 }}
-        className="max-w-md w-full p-8 space-y-6 bg-white shadow-2xl rounded-3xl border border-gray-200"
+        className="bg-gradient-to-r from-pink-200 to-blue-300 max-w-md w-full p-8 space-y-6 shadow-2xl rounded-3xl border border-gray-200"
       >
         <h1 className="text-3xl font-extrabold text-gray-800 text-center">BMI Calculator</h1>
         <div className="grid grid-cols-1 gap-4">
@@ -50,18 +50,18 @@ function BMICalculator() {
             placeholder="Weight (kg)"
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
-            className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="bg-gradient-to-r from-white to-blue-200 w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
           />
           <input
             type="number"
             placeholder="Height (cm)"
             value={height}
             onChange={(e) => setHeight(e.target.value)}
-            className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+            className="bg-gradient-to-r from-white to-blue-200 w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
           />
           <button
             onClick={calculateBMI}
-            className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-3 rounded-lg shadow-md hover:from-blue-600 hover:to-purple-600 transition duration-200"
+            className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-3 rounded-lg shadow-md hover:from-blue-600 hover:to-purple-600 transition duration-200 hover:scale-102"
           >
             Calculate BMI
           </button>
@@ -71,7 +71,7 @@ function BMICalculator() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="mt-4 p-4 bg-gray-50 rounded-lg border border-gray-200 text-center"
+            className="bg-gradient-to-r from-white to-blue-200 mt-4 p-4 rounded-lg border border-purple-300 text-center"
           >
             <p className="text-lg font-medium text-gray-700">
               Your BMI: <strong className="text-blue-600">{bmi}</strong>

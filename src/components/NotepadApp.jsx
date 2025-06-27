@@ -117,11 +117,11 @@ export default function NotepadApp() {
   const getCategoryColor = (cat) => {
     switch (cat) {
       case "Home":
-        return "bg-green-300 border-green-500 shadow-green-300/50";
+        return "bg-blue-400 border-blue-800 shadow-blue-300/50";
       case "Work":
-        return "bg-yellow-300 border-yellow-500 shadow-yellow-300/50";
+        return "bg-pink-200 border-pink-400 shadow-pink-300/50";
       case "Fitness":
-        return "bg-blue-300 border-blue-500 shadow-blue-300/50";
+        return "bg-blue-200 border-blue-500 shadow-blue-300/50";
       case "Other":
         return "bg-purple-300 border-purple-500 shadow-purple-300/50";
       default:
@@ -153,22 +153,22 @@ export default function NotepadApp() {
       {/* Form */}
       <div
         ref={formRef}
-        className="bg-white/50 backdrop-blur-xl shadow-2xl rounded-3xl p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"
+        className="bg-gradient-to-r from-pink-200 to-blue-300 backdrop-blur-xl shadow-2xl rounded-3xl p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"
       >
         <input
-          className="col-span-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+          className="bg-gradient-to-r from-pink-100 to-white col-span-1 p-3 border border-gray-300 rounded-lg ring-1 ring-blue-400 focus:ring-2 focus:ring-blue-500"
           placeholder="Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
         <input
-          className="col-span-1 lg:col-span-2 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+          className="bg-gradient-to-r from-white to-blue-100 col-span-1 lg:col-span-2 p-3 border border-gray-300 rounded-lg ring-1 ring-blue-400 focus:ring-2 focus:ring-blue-500"
           placeholder="Write a note..."
           value={content}
           onChange={(e) => setContent(e.target.value)}
         />
         <select
-          className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+          className="bg-gradient-to-r from-blue-100 to-blue-200 p-3 border border-gray-300 rounded-lg ring-1 ring-blue-400 focus:ring-2 focus:ring-blue-500"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
@@ -179,12 +179,12 @@ export default function NotepadApp() {
         <input
           type="datetime-local"
           min={new Date().toISOString().slice(0, 16)}
-          className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+          className="bg-gradient-to-r from-blue-200 to-blue-300 p-3 border border-gray-300 rounded-lg ring-1 ring-blue-400 focus:ring-2 focus:ring-blue-500"
           value={reminder}
           onChange={(e) => setReminder(e.target.value)}
         />
         <button
-          className="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white py-2 px-4 rounded-lg w-full transition shadow-xl hover:shadow-2xl hover:scale-[1.02]"
+          className="bg-gradient-to-r from-blue-500 to-purple-500 text-lg hover:from-blue-600 hover:to-purple-600 text-white py-2 px-4 rounded-lg w-full transition shadow-xl hover:shadow-2xl hover:scale-[1.02]"
           onClick={addNote}
         >
           {editingId ? "✏️ Update Note" : "➕ Add Note"}
@@ -194,13 +194,13 @@ export default function NotepadApp() {
       {/* Filters */}
       <div className="flex flex-wrap gap-2 items-center">
         <input
-          className="p-2 border border-gray-300 rounded-lg w-full sm:w-auto flex-grow focus:ring-2 focus:ring-blue-400"
+          className="bg-gradient-to-r from-pink-200 to-blue-300 p-2 border border-gray-300 rounded-lg w-full sm:w-auto flex-grow focus:ring-2 focus:ring-blue-400"
           placeholder="Search notes..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
         <select
-          className="p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+          className="bg-blue-300 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
         >
@@ -212,7 +212,7 @@ export default function NotepadApp() {
           ))}
         </select>
         <select
-          className="p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+          className="bg-blue-300 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
           value={sort}
           onChange={(e) => setSort(e.target.value)}
         >

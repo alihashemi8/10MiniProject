@@ -116,8 +116,8 @@ function PersonalBlog() {
                   rounded-full border transition-all duration-200 font-medium whitespace-nowrap
                   ${
                     isActive
-                      ? "bg-blue-600 text-white shadow-md"
-                      : "bg-blue-50 text-blue-700 hover:bg-blue-100 hover:scale-[1.03]"
+                      ? "bg-gradient-to-r from-blue-500 to-purple-500 text-lg hover:from-blue-600 hover:to-purple-600 text-white shadow-md"
+                      : "bg-white text-blue-700 hover:bg-gray-100 hover:scale-[1.03]"
                   }
                 `}
               >
@@ -139,7 +139,7 @@ function PersonalBlog() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="mt-6 bg-gray-50 border border-gray-200 rounded-xl p-5 shadow-inner"
+            className="bg-gradient-to-r from-pink-200 to-blue-300 mt-6 border border-gray-200 rounded-xl p-5 shadow-inner"
           >
             <p className="text-gray-700 leading-relaxed tracking-wide">
               {categories.find((cat) => cat.name === activeCategory)?.description}

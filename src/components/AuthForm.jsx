@@ -28,7 +28,7 @@ const AuthForm = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen px-4">
-      <div className="w-full sm:max-w-md md:max-w-lg lg:max-w-xl bg-white text-gray-900 rounded-2xl shadow-xl p-8 sm:p-10 space-y-8 transition-all duration-300">
+      <div className="w-full sm:max-w-md md:max-w-lg lg:max-w-xl bg-gradient-to-r from-pink-200 to-blue-300 text-gray-900 rounded-2xl shadow-xl p-8 sm:p-10 space-y-8 transition-all duration-300">
         <h2 className="text-3xl md:text-4xl font-bold text-center">
           {isLogin ? "Login" : "Sign Up"}
         </h2>
@@ -41,7 +41,7 @@ const AuthForm = () => {
               placeholder="Username or Email"
               value={profile.identifier}
               onChange={handleChange}
-              className="w-full px-5 py-3 text-base rounded-xl border bg-gray-100 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="w-full px-5 py-3 text-base rounded-xl border bg-gradient-to-r from-white to-blue-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-400"
             />
           ) : (
             <>
@@ -51,7 +51,7 @@ const AuthForm = () => {
                 placeholder="Username"
                 value={profile.username}
                 onChange={handleChange}
-                className="w-full px-5 py-3 text-base rounded-xl border bg-gray-100 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                className="w-full px-5 py-3 text-base rounded-xl border bg-gradient-to-r from-white to-blue-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-400"
               />
               <input
                 type="email"
@@ -59,7 +59,7 @@ const AuthForm = () => {
                 placeholder="Email"
                 value={profile.email}
                 onChange={handleChange}
-                className="w-full px-5 py-3 text-base rounded-xl border bg-gray-100 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                className="w-full px-5 py-3 text-base rounded-xl border bg-gradient-to-r from-white to-blue-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-400"
               />
             </>
           )}
@@ -70,7 +70,7 @@ const AuthForm = () => {
             placeholder="Password"
             value={profile.password}
             onChange={handleChange}
-            className="w-full px-5 py-3 text-base rounded-xl border bg-gray-100 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            className="w-full px-5 py-3 text-base rounded-xl border bg-gradient-to-r from-white to-blue-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-400"
           />
 
           {!isLogin && (
@@ -80,13 +80,13 @@ const AuthForm = () => {
               placeholder="Confirm Password"
               value={profile.confirmPassword}
               onChange={handleChange}
-              className="w-full px-5 py-3 text-base rounded-xl border bg-gray-100 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="w-full px-5 py-3 text-base rounded-xl border bg-gradient-to-r from-white to-blue-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-400"
             />
           )}
 
           <button
             type="submit"
-            className="w-full bg-green-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-green-700 transition"
+            className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl text-lg hover:from-blue-600 hover:to-purple-600 transition duration-200 hover:scale-102 font-semibold"
           >
             {isLogin ? "Login" : "Sign Up"}
           </button>
